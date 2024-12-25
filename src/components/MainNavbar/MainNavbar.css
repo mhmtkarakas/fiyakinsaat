@@ -1,0 +1,112 @@
+.main-navbar {
+  width: 100% !important;
+  background-color: #02002d !important;
+  padding: 30px 0;
+  border-top: 1px solid #ffd700;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar-brand img {
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 10px;
+  color: #fff !important;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  background-color: #02002d;
+  position: absolute;
+  z-index: 1000;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* Dropdown hover ile açılıp kapanması */
+.nav-item:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  color: #ffd700;
+  background-color: transparent;
+}
+
+/* Navbar Toggle Button Styling */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffd700; /* Altın sarısı */
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Remove border and tweak styling at max width 768px */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    border: none; /* Border kaldırıldı */
+  }
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after,
+  .navbar-toggler-icon span {
+    background-color: #ffd700; /* Altın sarısı */
+  }
+}
+
+
